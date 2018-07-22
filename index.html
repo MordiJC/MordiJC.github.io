@@ -1,0 +1,110 @@
+---
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+
+layout: none
+---
+
+{% capture current_url %}{{ page.url }}{% endcapture %}
+{% capture index_url %}{% link index.html %}{% endcapture %}
+{% capture about_me_url %}{% link about.html %}{% endcapture %}
+{% capture projects_url %}{% link projects.html %}{% endcapture %}
+
+{% capture brand_entry %}
+{% if current_url == index_url %}
+    <a href="#" class="brand item header">{{ site.title }}</a>
+{% else %}
+    <a href="{{ index_url }}" class="brand item header">{{ site.title }}</a>
+{% endif %}
+{% endcapture %}
+
+{% capture brand_link %}
+{% if current_url == index_url %}
+    <a href="#"><b>{{ site.title }}</b></a>
+{% else %}
+    <a href="{{ index_url }}"><b>{{ site.title }}</b></a>
+{% endif %}
+{% endcapture %}
+
+{% capture menu_entries %}
+{% if current_url == about_me_url %}
+    <a href="#" class="item active">About Me</a>
+{% else %}
+    <a href="{{ about_me_url }}" class="item">About Me</a>
+{% endif %}
+{% if current_url == about_me_url %}
+    <a href="#" class="item active">Projects</a>
+{% else %}
+    <a href="{{ projects_url }}" class="item">Projects</a>
+{% endif %}
+{% endcapture %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="shortcut icon" type="image/ico" href="{{ 'favico.ico' | relative_url }}"/>
+
+    {% seo title=false %}
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.3/dist/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ '/assets/css/main.css' | relative_url }}">
+</head>
+<body class="pushable">
+    <div class="ui sidebar left overlay inverted vertical menu">
+        <div class="item">
+            <a class="ui logo icon image mini">
+                <img src="{{ 'assets/images/TermJCLogo256.png' | relative_url }}" />
+            </a> &nbsp;
+            {{ brand_link }}
+        </div>
+        {{ menu_entries }}
+        <div class="item active bottom aligned content">
+            <p>Copyright &copy;</p>
+        </div>
+    </div>
+
+    <div class="ui page pusher">
+        <div class="ui computer tablet only">
+            <div class="ui inverted main menu navbar">
+                <div class="ui container">
+                    {{ brand_entry }}
+                    {{ menu_entries }}
+                </div>
+            </div>
+        </div>
+        <div class="ui mobile only narrow">
+            <div class="ui inverted main navbar menu">
+                <div class="ui container">
+                    <div class="left menu open">
+                        <a class="menu item"><i class="bars icon"></i></a>
+                        {{ brand_entry }}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ui container">
+            content
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.2/dist/semantic.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('.left.menu.open').click(function(e){
+                e.preventDefault();
+                $('.ui.sidebar').sidebar("toggle");
+            });
+            
+            $('.ui.dropdown').dropdown();
+        });
+    </script>
+</body>
+</html>

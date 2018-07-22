@@ -1,0 +1,61 @@
+@media only screen and (max-width:767px) {
+    .ui[class*="tablet only"]:not(.mobile) {
+        display:none!important
+    }
+    .ui[class*="computer only"]:not(.mobile) {
+        display:none!important
+    }
+    .ui[class*="large screen only"]:not(.mobile) {
+        display:none!important
+    }
+    .ui[class*="widescreen only"]:not(.mobile) {
+        display:none!important
+    }
+}
+@media only screen and (min-width:768px) and (max-width:991px) {
+    .ui[class*="mobile only"]:not(.tablet) {
+        display:none!important
+    }
+    .ui[class*="computer only"]:not(.tablet) {
+        display:none!important
+    }
+    .ui[class*="large screen only"]:not(.mobile) {
+        display:none!important
+    }
+    .ui[class*="widescreen only"]:not(.mobile) {
+        display:none!important
+    }
+}
+@media only screen and (min-width:992px) and (max-width:1199px) {
+    .ui[class*="mobile only"]:not(.computer) {
+        display:none!important
+    }
+    .ui[class*="tablet only"]:not(.computer) {
+        display:none!important
+    }
+    .ui[class*="large screen only"]:not(.mobile) {
+        display:none!important
+    }
+    .ui[class*="widescreen only"]:not(.mobile) {
+        display:none!important
+    }
+}
+@media only screen and (min-width:1200px) and (max-width:1919px) {
+    .ui[class*="mobile only"]:not(.computer) {
+        display:none!important
+    }
+    .ui[class*="tablet only"]:not(.computer) {
+        display:none!important
+    }
+    .ui[class*="widescreen only"]:not(.mobile) {
+        display:none!important
+    }
+}
+@media only screen and (min-width:1920px) {
+    .ui[class*="mobile only"]:not(.computer) {
+        display:none!important
+    }
+    .ui[class*="tablet only"]:not(.computer) {
+        display:none!important
+    }
+}

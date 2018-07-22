@@ -1,0 +1,49 @@
+<!-- Do przerobienia na modularne i działające -->
+{% capture current_url %}{{ page.url }}{% endcapture %}
+{% capture index_url %}{% link index.html %}{% endcapture %}
+{% capture about_me_url %}{% link about.html %}{% endcapture %}
+{% capture projects_url %}{% link projects.html %}{% endcapture %}
+
+{% capture brand_entry %}
+{% if current_url == index_url %}
+    <a href="#" class="brand item">{{ site.title }}</a>
+{% else %}
+    <a href="{{ index_url }}" class="brand item">{{ site.title }}</a>
+{% endif %}
+{% endcapture %}
+
+{% capture menu_entries %}
+{% if current_url == about_me_url %}
+    <a href="#" class="item active">About Me</a>
+{% else %}
+    <a href="{{ about_me_url }}" class="item">About Me</a>
+{% endif %}
+{% if current_url == about_me_url %}
+    <a href="#" class="item active">Projects</a>
+{% else %}
+    <a href="{{ projects_url }}" class="item">Projects</a>
+{% endif %}
+{% endcapture %}
+
+
+<div class="ui computer tablet only">
+    <div class="ui inverted menu navbar">
+    {{ brand_entry }}
+    {{ menu_entries }}
+    </div>
+</div>
+<div class="ui mobile only narrow">
+    <div class="ui inverted navbar menu">
+        {{ brand_entry }}
+        <div class="right menu open">
+            <a class="menu item"><i class="bars icon"></i></a>
+        </div>
+    </div>
+    <!-- <div class="ui vertical navbar menu inverted transition">
+        {{ menu_entries }}
+    </div> -->
+</div>
+
+<div class="ui sidebar menu floating main-sidebar mobile only vertical overlay">
+    {{ menu_entries }}
+</div>
