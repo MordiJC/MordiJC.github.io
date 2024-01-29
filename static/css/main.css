@@ -1,0 +1,9 @@
+#cookie-banner>footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+a.logo > img {
+    margin-right: 10pt;
+    margin-left: 10pt;
+}

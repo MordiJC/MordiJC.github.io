@@ -1,4 +1,4 @@
-baseURL = "https://piko-heksagon.netlify.app/"
+baseURL = "https://mordijc.github.io/"
 languageCode = "en-us"
 title = " MordiJC's blog"
 theme = "piko"
@@ -36,9 +36,9 @@ mainSections = [ "blog" ]
 ShowShareButtons = true
 ShowCodeCopyButtons = true
 ShowRelated = true
-# CookieNotice = "We use cookies to improve your experience on our site."
-# CookieLink = "/legal/privacy/#cookies-and-web-beacons"
-# CookieButton = "Cookies Policy"
+CookieNotice = "We use cookies to improve your experience on our site."
+CookieLink = "/legal/cookies"
+CookieButton = "Cookies Policy"
 disableAnchoredHeadings = false
 ShowReadingTime = true
 ShowBreadCrumbs = true
@@ -69,7 +69,7 @@ apple_touch_icon = "/uploads/hex_logo_simple_gold.svg"
 safari_pinned_tab = "/uploads/hex_logo_simple_gold.svg"
 
 [params.homepage]
-disableHeroSection = false
+disableHeroSection = true
 heroTitle = "Piko"
 heroDescription = "Lightweight theme for your every need"
 heroCTAPrimaryText = "Blog"
@@ -84,22 +84,27 @@ seeMoreText = "More Posts"
 disableAboutSection = false
 aboutTitle = "About"
 aboutDescription = "Just something about me"
-aboutImgUrl = "/uploads/self.webp"
-aboutContent = "Hi guys. This is where you put something about yourself."
-disablePortfolioSection = false
+aboutImgUrl = "/uploads/me.jpg"
+aboutContent = """
+I'm firmware engineer currently employed at Google working mostly on the coreboot project and other stuff around it.
+In the spare time I like to dive into sci-fi and high fantasy worlds, and also do some DIY stuff."""
+disablePortfolioSection = true 
 portfolioTitle = "Portfolio"
 portfolioDescription = "Some of my works"
 
 [[params.homepage.portfolio]]
 imageUrl = "/uploads/portfolio-1.webp"
+websiteUrl = "#"
 description = "Portfolio One."
 
 [[params.homepage.portfolio]]
 imageUrl = "/uploads/portfolio-2.webp"
+websiteUrl = "#"
 description = "Portfolio Two."
 
 [[params.homepage.portfolio]]
 imageUrl = "/uploads/portfolio-3.webp"
+websiteUrl = "#"
 description = "Portfolio Three."
 
 [params.fuseOpts]
@@ -113,6 +118,9 @@ keys = [ "title", "permalink", "summary", "content" ]
 
 [[params.plugins.css]]
 link = "plugins/css/pico.min.css"
+
+[[params.plugins.css]]
+link = "css/main.css"
 
 [[params.plugins.js]]
 link = "plugins/js/feather.min.js"
