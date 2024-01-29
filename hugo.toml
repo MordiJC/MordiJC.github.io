@@ -1,8 +1,8 @@
 baseURL = "https://mordijc.github.io/"
 languageCode = "en-us"
-title = " MordiJC's blog"
+title = "Jacob's blog"
 theme = "piko"
-paginate = "9"
+paginate = 9
 copyright = 'A template by [Heksagon](https://www.heksagon.net "Your most friendly developer")'
 enableRobotsTXT = true
 buildDrafts = true
@@ -53,7 +53,7 @@ ShowBreadCrumbs = true
 # SiteVerificationTag =
 
 [params.label]
-title = "_MordiJC's blog_"
+title = "_Jacob's Blog_"
 text = ""
 lightNavIcon = "/uploads/hex_logo_simple_red.svg"
 darkNavIcon = "/uploads/hex_logo_simple_gold.svg"
@@ -69,21 +69,21 @@ apple_touch_icon = "/uploads/hex_logo_simple_gold.svg"
 safari_pinned_tab = "/uploads/hex_logo_simple_gold.svg"
 
 [params.homepage]
-disableHeroSection = true
-heroTitle = "Piko"
-heroDescription = "Lightweight theme for your every need"
+disableHeroSection = false
+heroTitle = "Jacob's Blog"
+heroDescription = "Firmware, software (and maybe hardware) content."
 heroCTAPrimaryText = "Blog"
 heroCTAPrimaryUrl = "/blog/"
 heroCTASecondaryText = "Contact Me"
 heroCTASecondaryUrl = "/contact/"
-heroBackgroundImage = "/uploads/portfolio-1.webp"
+heroBackgroundImage = "/uploads/bench-1.jpg"
 disableBlogSection = false
 blogTitle = "Latest Posts"
-blogDescription = "This is my latest blog posts"
+blogDescription = "Latest blog posts"
 seeMoreText = "More Posts"
 disableAboutSection = false
 aboutTitle = "About"
-aboutDescription = "Just something about me"
+aboutDescription = "Briefly about me"
 aboutImgUrl = "/uploads/me.jpg"
 aboutContent = """
 I'm firmware engineer currently employed at Google working mostly on the coreboot project and other stuff around it.
